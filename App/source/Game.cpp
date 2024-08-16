@@ -1,5 +1,9 @@
 #include "Game.h"
 
+static Texture* player;
+static float frameWidth;
+static float frameHeight;
+
 //_____________
 /*
     Constructor Settings
@@ -7,8 +11,18 @@
 
 Game::Game(AppInfo& info) : Application(info)
 {
-    SetPlayer();
-    SetCamera();
+
+    
+    AssetManager::LoadTexture("player", "assets/textures/playerIdle.png");
+    player = AssetManager::GetTexture("player");
+    frameWidth = player->width/11;
+    frameHeight = player->height;
+
+    
+
+
+    //SetPlayer();
+    //SetCamera();
     //SetBoundry();
 }
 
@@ -127,11 +141,33 @@ void Game::setSkyBox()
 
 void Game::CheckAccess()
 {
-    if ( IsKeyDown(KEY_LEFT_CONTROL) && IsKeyDown(KEY_LEFT_SHIFT) && IsKeyDown(KEY_LEFT_ALT) && IsKeyPressed(KEY_BACKSLASH) ) MODE = ACCESS[0].c_str(); printf("%s", MODE);
-    if ( IsKeyDown(KEY_LEFT_CONTROL) && IsKeyPressed(KEY_BACKSLASH) ) MODE = ACCESS[1].c_str(); printf("%s", MODE);
-    if ( IsKeyDown(KEY_LEFT_CONTROL) && IsKeyDown(KEY_LEFT_SHIFT) && IsKeyPressed(KEY_BACKSLASH) ) MODE = ACCESS[2].c_str(); printf("%s", MODE);
-    
-    
+/*
+    if ( IsKeyDown(KEY_LEFT_CONTROL) && IsKeyDown(KEY_LEFT_SHIFT) && IsKeyDown(KEY_LEFT_ALT) && IsKeyPressed(KEY_BACKSLASH) ) {ACCESS = (AccessLevel)0;}
+    if ( IsKeyDown(KEY_LEFT_CONTROL) && IsKeyPressed(KEY_BACKSLASH) ) {ACCESS = PLAYER;}
+    if ( IsKeyDown(KEY_LEFT_CONTROL) && IsKeyDown(KEY_LEFT_SHIFT) && IsKeyPressed(KEY_BACKSLASH) ) {ACCESS = VIEWER; }
+*/  
+
+    u32 key = GetKeyPressed();
+    switch (key)
+    {
+        case KEY_F1:
+        {
+            ACCESS = ADMIN;
+            break;
+        }
+
+        case KEY_F2:
+        {
+            ACCESS = PLAYER;
+            break;
+        }
+
+        case KEY_F3:
+        {
+            ACCESS = VIEWER;
+            break;
+        }
+    }
 }
 
 //-------------
@@ -141,11 +177,11 @@ void Game::CheckAccess()
 
 void Game::OnUpdate()
 {
-    //CheckAccess();
+    CheckAccess();
 
     m_camera.target = { m_player.pos.x + float(m_player.bodyDim.width/2), m_player.pos.y + float(m_player.bodyDim.height/2) }; //printf(V2_FMT, V2_OPEN(m_camera.target));
     
-    if ( IsKeyDown(KEY_LEFT_CONTROL) ) { AdjustCamera(); }
+    if ( ACCESS == ADMIN && IsKeyDown(KEY_LEFT_CONTROL) ) { AdjustCamera(); }
     
     m_player.Update();
 
@@ -154,9 +190,13 @@ void Game::OnRender()
 {
     BeginMode2D(m_camera);
         //SetBoundry();
-        m_player.Draw();
-        
+        //m_player.Draw();
     EndMode2D();
+
+    Rectangle srcRec = {0, 0, frameWidth, frameHeight};
+    Rectangle destRec = {DefWinWidth/2.0f, DefWinHeight/2.0f, frameWidth*2.0f, frameHeight*2.0f};
+
+    DrawTexturePro(*player, srcRec, destRec, {0, 0}, 0, WHITE);
 }
 void Game::OnRenderUI()
 {

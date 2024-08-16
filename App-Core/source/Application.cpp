@@ -1,12 +1,16 @@
 #include "Application.h"
+#include "AssetManger.h"
 
 Application::Application(AppInfo& info)
 {
     m_info = info;
     m_window.Open(m_info.WinSize.x, m_info.WinSize.y, m_info.title);
+    InitAudioDevice();
 }
 Application::~Application()
 {
+    AssetManager::Clean();
+    CloseAudioDevice();
     m_window.Close();
 }
 

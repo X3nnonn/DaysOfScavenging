@@ -19,7 +19,7 @@ void Player::Draw()
 }
 void Player::Update()
 {
-    setBody(); /* Log Player Collision Check */   printf("T L R B: "); printf("%d, %d, %d, %d\n", TopCollisionCheck, LeftCollisionCheck, RightCollisionCheck, BottomCollisionCheck);
+    setBody(); /* Log Player Collision Check */   //printf("T L R B: "); printf("%d, %d, %d, %d\n", TopCollisionCheck, LeftCollisionCheck, RightCollisionCheck, BottomCollisionCheck);
 
     moveDir();    /* Log Player Position */   //printf("Player Positon: "); printf(V2_FMT, V2_OPEN(pos));
     pos.x += vel.x;

@@ -3,6 +3,14 @@
 #include "Application.h"
 #include "Player.h"
 #include "Object.h"
+#include "AssetManger.h"
+
+enum AccessLevel
+{
+    ADMIN = 0,
+    PLAYER,
+    VIEWER,
+};
 
 
 class Game : public Application
@@ -38,9 +46,8 @@ private:
     Object m_ground;
     Object m_leftWall;
 
-    std::string ACCESS[3] = {"ADMIN", "PLAYER", "VIEWER"};
-    const char* MODE;
-    
+    AccessLevel ACCESS = ADMIN;
+
     void CheckAccess();
 
     

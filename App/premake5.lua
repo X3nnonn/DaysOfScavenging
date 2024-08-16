@@ -28,13 +28,13 @@ links({
 	"raylib"
 })
 
---postbuildcommands({
---	"cp -r assets/ %{cfg.buildtarget.directory}",
---})
+postbuildcommands({
+	"cp -r assets/ %{cfg.buildtarget.directory}",
+})
 
 filter("system:Unix")
 system("linux")
-cdialect("C17")
+cppdialect("C++17")
 systemversion("latest")
 defines({
 	"PLATFORM_LINUX",
