@@ -13,19 +13,17 @@ files({
 })
 
 includedirs({
-    "../App-Core/source",
+	"../App-Core/source",
 	"../vendor/raylib/include",
-
 })
 
 libdirs({
 	"../vendor/raylib/lib",
-
 })
 
 links({
-    "DOS-Library",
-	"raylib"
+	"DOS-Library",
+	"raylib",
 })
 
 postbuildcommands({

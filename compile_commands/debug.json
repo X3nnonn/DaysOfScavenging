@@ -1,0 +1,43 @@
+[
+          {
+            "directory": "/home/magnesium/dev/C++/DaysOfScavenging/App-Core",
+            "file": "/home/magnesium/dev/C++/DaysOfScavenging/App-Core/source/Application.cpp",
+            "command": "cc -MD -MP -DDEBUG -I/home/magnesium/dev/C++/DaysOfScavenging/vendor/raylib/include -m64 -g -o /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS-Library/Application.o -MF /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS-Library/Application.d -c /home/magnesium/dev/C++/DaysOfScavenging/App-Core/source/Application.cpp"
+          }
+,
+          {
+            "directory": "/home/magnesium/dev/C++/DaysOfScavenging/App-Core",
+            "file": "/home/magnesium/dev/C++/DaysOfScavenging/App-Core/source/AssetManager.cpp",
+            "command": "cc -MD -MP -DDEBUG -I/home/magnesium/dev/C++/DaysOfScavenging/vendor/raylib/include -m64 -g -o /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS-Library/AssetManager.o -MF /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS-Library/AssetManager.d -c /home/magnesium/dev/C++/DaysOfScavenging/App-Core/source/AssetManager.cpp"
+          }
+,
+          {
+            "directory": "/home/magnesium/dev/C++/DaysOfScavenging/App-Core",
+            "file": "/home/magnesium/dev/C++/DaysOfScavenging/App-Core/source/Window.cpp",
+            "command": "cc -MD -MP -DDEBUG -I/home/magnesium/dev/C++/DaysOfScavenging/vendor/raylib/include -m64 -g -o /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS-Library/Window.o -MF /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS-Library/Window.d -c /home/magnesium/dev/C++/DaysOfScavenging/App-Core/source/Window.cpp"
+          }
+,
+          {
+            "directory": "/home/magnesium/dev/C++/DaysOfScavenging/App",
+            "file": "/home/magnesium/dev/C++/DaysOfScavenging/App/source/Game.cpp",
+            "command": "cc -MD -MP -DDEBUG -I/home/magnesium/dev/C++/DaysOfScavenging/App-Core/source -I/home/magnesium/dev/C++/DaysOfScavenging/vendor/raylib/include -m64 -g -o /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS/Game.o -MF /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS/Game.d -c /home/magnesium/dev/C++/DaysOfScavenging/App/source/Game.cpp"
+          }
+,
+          {
+            "directory": "/home/magnesium/dev/C++/DaysOfScavenging/App",
+            "file": "/home/magnesium/dev/C++/DaysOfScavenging/App/source/Main.cpp",
+            "command": "cc -MD -MP -DDEBUG -I/home/magnesium/dev/C++/DaysOfScavenging/App-Core/source -I/home/magnesium/dev/C++/DaysOfScavenging/vendor/raylib/include -m64 -g -o /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS/Main.o -MF /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS/Main.d -c /home/magnesium/dev/C++/DaysOfScavenging/App/source/Main.cpp"
+          }
+,
+          {
+            "directory": "/home/magnesium/dev/C++/DaysOfScavenging/App",
+            "file": "/home/magnesium/dev/C++/DaysOfScavenging/App/source/Object.cpp",
+            "command": "cc -MD -MP -DDEBUG -I/home/magnesium/dev/C++/DaysOfScavenging/App-Core/source -I/home/magnesium/dev/C++/DaysOfScavenging/vendor/raylib/include -m64 -g -o /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS/Object.o -MF /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS/Object.d -c /home/magnesium/dev/C++/DaysOfScavenging/App/source/Object.cpp"
+          }
+,
+          {
+            "directory": "/home/magnesium/dev/C++/DaysOfScavenging/App",
+            "file": "/home/magnesium/dev/C++/DaysOfScavenging/App/source/Player.cpp",
+            "command": "cc -MD -MP -DDEBUG -I/home/magnesium/dev/C++/DaysOfScavenging/App-Core/source -I/home/magnesium/dev/C++/DaysOfScavenging/vendor/raylib/include -m64 -g -o /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS/Player.o -MF /home/magnesium/dev/C++/DaysOfScavenging/build/Debug-linux/DOS/Player.d -c /home/magnesium/dev/C++/DaysOfScavenging/App/source/Player.cpp"
+          }
+]

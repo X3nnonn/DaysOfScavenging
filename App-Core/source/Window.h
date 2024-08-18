@@ -13,8 +13,6 @@ public:
     void Close();
 
 public:
-
 private:
-
 private:
 };

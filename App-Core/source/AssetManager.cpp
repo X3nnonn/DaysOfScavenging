@@ -24,10 +24,9 @@ Music* AssetManager::GetAudio(const char* name)
         TraceLog(LOG_WARNING, "s_audio %s was not found.", name);
         return NULL;
     }
-    
-    return s_audio[name];
 
-}   
+    return s_audio[name];
+}
 
 Shader* AssetManager::GetShader(const char* name)
 {
@@ -37,10 +36,9 @@ Shader* AssetManager::GetShader(const char* name)
         TraceLog(LOG_WARNING, "Shader %s was not found.", name);
         return NULL;
     }
-    
+
     return s_shaders[name];
 }
-
 
 void AssetManager::LoadTexture(const char* name, const char* path)
 {
@@ -96,7 +94,6 @@ void AssetManager::DropTexture(const char* name)
         return;
     }
 
-
     UnloadTexture(*s_textures[name]);
     delete s_textures[name];
     s_textures.erase(texITR);
@@ -111,7 +108,6 @@ void AssetManager::DropAudio(const char* name)
         return;
     }
 
-
     UnloadMusicStream(*s_audio[name]);
     delete s_audio[name];
     s_audio.erase(audITR);
@@ -125,7 +121,6 @@ void AssetManager::DropShader(const char* name)
         TraceLog(LOG_WARNING, "Shader %s was not found.", name);
         return;
     }
-
 
     UnloadShader(*s_shaders[name]);
     delete s_shaders[name];

@@ -8,7 +8,6 @@ struct ShaderSRC
 {
     std::string vertexPath;
     std::string fragmentPath;
-
 };
 
 class AssetManager
@@ -27,6 +26,7 @@ public:
     static void DropShader(const char* name);
 
     static void Clean();
+
 private:
     static std::unordered_map<std::string, Texture*> s_textures;
     static std::unordered_map<std::string, Music*> s_audio;

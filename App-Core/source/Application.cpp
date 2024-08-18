@@ -16,29 +16,25 @@ Application::~Application()
 
 void Application::Run()
 {
-    while(m_isRunning)
+    while (m_isRunning)
     {
         HandleEvents();
         OnUpdate();
 
         BeginDrawing();
 
-            ClearBackground(RAYWHITE);
+        ClearBackground(RAYWHITE);
 
-            OnRender();
-            OnRenderUI();
+        OnRender();
+        OnRenderUI();
 
         EndDrawing();
-
     }
 }
-void Application::Quit()
-{m_isRunning = false;}
-void Application::HandleEvents()
-{m_isRunning = !WindowShouldClose();}
 
-void Application::OnUpdate(){}
-void Application::OnRender(){}
-void Application::OnRenderUI(){}
+void Application::Quit() { m_isRunning = false; }
+void Application::HandleEvents() { m_isRunning = !WindowShouldClose(); }
 
-
+void Application::OnUpdate() {}
+void Application::OnRender() {}
+void Application::OnRenderUI() {}

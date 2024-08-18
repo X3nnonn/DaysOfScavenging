@@ -2,7 +2,6 @@
 
 #include "Window.h"
 
-
 struct AppInfo
 {
     Vector2 WinSize;
@@ -12,7 +11,8 @@ struct AppInfo
 class Application
 {
 public:
-    Application(AppInfo& info); ~Application();
+    Application(AppInfo& info);
+    ~Application();
 
     void Run();
     void Quit();
@@ -24,9 +24,7 @@ public:
     virtual void OnRenderUI();
 
 public:
-
 private:
-    
 private:
     AppInfo m_info;
 

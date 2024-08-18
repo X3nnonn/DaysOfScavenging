@@ -2,41 +2,46 @@
 
 #include "Base.h"
 
+struct Dim
+{
+    int width;
+    int height;
+};
 
 struct Playerbody
 {
-    float top;                
-    float bottom;                
-    float left;            
-    float right;           
-};
+    float top;
+    float bottom;
+    float left;
+    float right;
 
+    Vector2 pos;
+    Dim scale;
+};
 
 class Player
 {
-public: 
-    Player(); ~Player() = default;
+public:
+    Player();
+    ~Player() = default;
 
     void Update();
     void Draw();
 
-    
-
 public:
-    bool TopCollisionCheck = false; bool BottomCollisionCheck = false; bool LeftCollisionCheck = false; bool RightCollisionCheck = false;
-    
+    bool TopCollisionCheck = false;
+    bool BottomCollisionCheck = false;
+    bool LeftCollisionCheck = false;
+    bool RightCollisionCheck = false;
+
     int ground;
-    
+
     float gravity = 1.0f;
     Vector2 vel = {0, 0};
     float speed = 10.0f;
 
-    
-
 public:
-    Rectangle bodyDim;
-    Color color;
-    Vector2 pos = {DefWinWidth/2, DefWinHeight/2};
+    Color color = GREEN;
 
     Playerbody body;
 
@@ -47,16 +52,8 @@ private:
     void moveJump();
     void moveFall();
 
-
-
 private:
     float direction = 0;
 
-    
-
 private:
-    
-    
 };
-
-

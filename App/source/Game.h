@@ -12,7 +12,6 @@ enum AccessLevel
     VIEWER,
 };
 
-
 class Game : public Application
 {
 public:
@@ -23,6 +22,9 @@ public:
     void OnRender() override;
     void OnRenderUI() override;
 
+public:
+private:
+    void CheckAccess();
     void SetPlayer();
 
     void SetCamera();
@@ -35,24 +37,13 @@ public:
     void setSkyBox();
     void setGround();
 
-public:
-    
 private:
     Camera2D m_camera;
 
     Player m_player;
 
-    
     Object m_ground;
     Object m_leftWall;
 
     AccessLevel ACCESS = ADMIN;
-
-    void CheckAccess();
-
-    
-
-private:
-    
-
 };

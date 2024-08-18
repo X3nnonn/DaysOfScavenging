@@ -14,21 +14,15 @@ files({
 
 includedirs({
 	"../vendor/raylib/include",
-
 })
 
 libdirs({
 	"../vendor/raylib/lib",
-
 })
 
 links({
-	"raylib"
+	"raylib",
 })
-
---postbuildcommands({
---	"cp -r assets/ %{cfg.buildtarget.directory}",
---})
 
 filter("system:Unix")
 system("linux")

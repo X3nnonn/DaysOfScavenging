@@ -17,18 +17,16 @@ typedef uint64_t u64;
 
 typedef bool b8;
 
-#define DefWinWidth 1280
-#define DefWinHeight 720
+#define DEFAULT_WINDOW_WIDTH 1280
+#define DEFAULT_WINDOW_HEIGHT 720
 #define DefPlayerSize 50
 
-
-#define V2_FMT "<%.3f, %.3f>\n"
-#define V3_FMT "<%.3f, %.3f, %.3f>\n"
-#define V4_FMT "<%.3f, %.3f, %.3f, %.3f>\n"
+#define V2_FMT "<%.3f, %.3f>"
+#define V3_FMT "<%.3f, %.3f, %.3f>"
+#define V4_FMT "<%.3f, %.3f, %.3f, %.3f>"
 
 #define V2_OPEN(v) v.x, v.y
 #define V3_OPEN(v) v.x, v.y, v.z
 #define V4_OPEN(v) v.x, v.y, v.z, v.w
-
 
 #define LEN(array) sizeof(array) / sizeof(array[0])

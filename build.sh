@@ -38,7 +38,7 @@ then
 elif [[ $config = "ecc" ]] 
 then
     system="$2"
-    "./vendor/premake/$system/premake5" export-compile-commands
+    "./vendor/premake/premake5" export-compile-commands
     cp "compile_commands/debug.json" "compile_commands.json"
 elif [[ $config = "clean" ]]
 then
